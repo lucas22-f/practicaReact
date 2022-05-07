@@ -1,13 +1,14 @@
 import Todo from "./Todo"
+import {v4 as uuid} from "uuid"
+
 function TodoList({todoList}){
     
     return (<>
+        
     
-        <h1> Lista de tareas</h1>
-        <p>tambien hay mas cosas del todo list</p>
         <ol>
         {todoList.map((el)=>(
-            <Todo key ={el} todo={el}></Todo>
+            <Todo key ={uuid()} todo={el}></Todo>
             ))}
         </ol>
 
